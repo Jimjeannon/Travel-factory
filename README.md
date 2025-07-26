@@ -1,26 +1,40 @@
-# Welcome to your Lovable project
+# Travel Factory
 
-## Project info
+Plateforme de réservation de séjours au ski innovante et fluide.
 
-**URL**: https://lovable.dev/projects/e9aaa0d2-692d-4ec7-b92b-a54c447e5544
+## Démarrer le projet en local
 
-## How can I edit this code?
+Assurez-vous d'avoir Node.js & npm installés ([voir la doc nvm](https://github.com/nvm-sh/nvm#installing-and-updating)).
 
-There are several ways of editing your application.
+```sh
+# 1. Cloner le dépôt
+git clone https://github.com/Jimjeannon/Travel-factory.git
 
-**Use Lovable**
+# 2. Aller dans le dossier du projet
+cd Travel-factory
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e9aaa0d2-692d-4ec7-b92b-a54c447e5544) and start prompting.
+# 3. Installer les dépendances
+npm install
 
-Changes made via Lovable will be committed automatically to this repo.
+# 4. Lancer le serveur de développement
+npm run dev
+```
 
-**Use your preferred IDE**
+## Technologies utilisées
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Déploiement
 
-Follow these steps:
+Vous pouvez déployer ce projet sur n'importe quelle plateforme compatible Vite/React (Vercel, Netlify, etc.).
+
+## Auteur
+
+Jim Jeannon
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
