@@ -62,13 +62,13 @@ export const FilterSection = ({ filters, onFiltersChange, onClearFilters }: Filt
           <h4 className="font-medium mb-3">Destination</h4>
           <Select
             value={filters.location}
-            onValueChange={(value) => onFiltersChange({ ...filters, location: value })}
+            onValueChange={(value) => onFiltersChange({ ...filters, location: value === "all" ? "" : value })}
           >
             <SelectTrigger>
               <SelectValue placeholder="Choisir une destination" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Toutes les destinations</SelectItem>
+              <SelectItem value="all">Toutes les destinations</SelectItem>
               {locations.map((location) => (
                 <SelectItem key={location} value={location}>
                   {location}
@@ -83,13 +83,13 @@ export const FilterSection = ({ filters, onFiltersChange, onClearFilters }: Filt
           <h4 className="font-medium mb-3">Note minimum</h4>
           <Select
             value={filters.rating.toString()}
-            onValueChange={(value) => onFiltersChange({ ...filters, rating: Number(value) })}
+            onValueChange={(value) => onFiltersChange({ ...filters, rating: value === "all" ? 0 : Number(value) })}
           >
             <SelectTrigger>
               <SelectValue placeholder="Note minimum" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="0">Toutes les notes</SelectItem>
+              <SelectItem value="all">Toutes les notes</SelectItem>
               <SelectItem value="3">3+ étoiles</SelectItem>
               <SelectItem value="4">4+ étoiles</SelectItem>
               <SelectItem value="4.5">4.5+ étoiles</SelectItem>
@@ -129,11 +129,11 @@ export const FilterSection = ({ filters, onFiltersChange, onClearFilters }: Filt
         </div>
 
         {/* Active Filters */}
-        {(filters.location || filters.amenities.length > 0 || filters.rating > 0) && (
+        {(filters.location && filters.location !== "all" || filters.amenities.length > 0 || filters.rating > 0) && (
           <div>
             <h4 className="font-medium mb-3">Filtres actifs</h4>
             <div className="flex flex-wrap gap-2">
-              {filters.location && (
+              {filters.location && filters.location !== "all" && (
                 <Badge variant="secondary" className="flex items-center space-x-1">
                   <span>{filters.location}</span>
                   <X 

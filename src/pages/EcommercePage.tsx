@@ -63,7 +63,7 @@ export default function EcommercePage() {
     const matchesSearch = resort.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          resort.location.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesPrice = resort.price >= filters.priceRange[0] && resort.price <= filters.priceRange[1];
-    const matchesLocation = !filters.location || resort.location.includes(filters.location);
+    const matchesLocation = !filters.location || filters.location === "all" || resort.location.includes(filters.location);
     const matchesAmenities = filters.amenities.length === 0 || 
                             filters.amenities.every(amenity => resort.amenities.includes(amenity));
     const matchesRating = resort.rating >= filters.rating;
@@ -162,13 +162,13 @@ export default function EcommercePage() {
               </div>
               
               {/* Active filters count */}
-              {(filters.location || filters.amenities.length > 0 || filters.rating > 0) && (
+              {(filters.location && filters.location !== "all" || filters.amenities.length > 0 || filters.rating > 0) && (
                 <Badge variant="secondary" className="bg-primary/10 text-primary">
                   {[
-                    filters.location ? 1 : 0,
+                    filters.location && filters.location !== "all" ? 1 : 0,
                     filters.amenities.length,
                     filters.rating > 0 ? 1 : 0
-                  ].reduce((a, b) => a + b, 0)} filtre{[filters.location ? 1 : 0, filters.amenities.length, filters.rating > 0 ? 1 : 0].reduce((a, b) => a + b, 0) > 1 ? 's' : ''} actif{[filters.location ? 1 : 0, filters.amenities.length, filters.rating > 0 ? 1 : 0].reduce((a, b) => a + b, 0) > 1 ? 's' : ''}
+                  ].reduce((a, b) => a + b, 0)} filtre{[filters.location && filters.location !== "all" ? 1 : 0, filters.amenities.length, filters.rating > 0 ? 1 : 0].reduce((a, b) => a + b, 0) > 1 ? 's' : ''} actif{[filters.location && filters.location !== "all" ? 1 : 0, filters.amenities.length, filters.rating > 0 ? 1 : 0].reduce((a, b) => a + b, 0) > 1 ? 's' : ''}
                 </Badge>
               )}
             </div>
