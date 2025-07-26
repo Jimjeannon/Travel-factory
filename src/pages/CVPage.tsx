@@ -2,74 +2,115 @@ import { Navigation } from "@/components/ui/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Calendar, 
-  Code, 
-  Globe, 
-  Github, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  Code,
+  Globe,
+  Github,
   Linkedin,
   Download,
   Award,
   Briefcase,
-  GraduationCap
+  GraduationCap,
 } from "lucide-react";
 import developerWorkspace from "@/assets/developer-workspace.jpg";
 
 export default function CVPage() {
   const skills = {
-    frontend: ["Vue.js 3", "Nuxt 3", "React", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS"],
-    tools: ["Git", "Azure DevOps", "Figma", "Vitest", "Playwright", "Vite", "Webpack"],
-    backend: ["Node.js", "REST APIs", "GraphQL", "PHP", "MySQL", "MongoDB"],
-    other: ["Responsive Design", "Accessibility (a11y)", "SEO", "Performance Optimization", "Agile/Scrum"]
+    frontend: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Angular",
+      "JavaScript",
+      "WebFlow",
+      "Spline",
+    ],
+    tools: ["GitLab", "Slack", "Figma", "Photoshop", "Google Analytics", "SEO"],
+    backend: [],
+    other: [
+      "Agile",
+      "Scrum",
+      "Collaboration",
+      "Adaptabilité",
+      "Orientation solutions",
+      "Passion pour le ski",
+    ],
   };
 
   const experiences = [
     {
-      title: "Développeur Frontend Senior",
-      company: "Tech Solutions",
-      period: "2022 - 2024",
-      location: "Paris, France",
+      title: "Développeur Front-End",
+      company: "Le Bonbon (Média urbain)",
+      period: "1 an",
+      location: "Paris",
       highlights: [
-        "Développement d'applications Vue.js 3 avec Composition API",
-        "Optimisation des performances web (Core Web Vitals)",
-        "Implémentation de design systems avec Tailwind CSS",
-        "Collaboration étroite avec les équipes UX/UI et backend"
-      ]
+        "Développement d'interfaces collaboratives avec React, Next.js et TypeScript, en utilisant GitLab et Slack.",
+        "Coordination avec l'équipe marketing pour répondre aux besoins techniques et fonctionnels.",
+      ],
     },
     {
-      title: "Développeur Frontend",
-      company: "StartupTech",
-      period: "2021 - 2022", 
-      location: "Lyon, France",
+      title: "Développeur Front-End",
+      company: "Insiders (Studio NFT)",
+      period: "1 an",
+      location: "Paris",
       highlights: [
-        "Migration d'applications legacy vers Vue.js 3",
-        "Mise en place de tests automatisés (Vitest, Cypress)",
-        "Intégration d'APIs REST et GraphQL",
-        "Amélioration de l'accessibilité web (WCAG 2.1)"
-      ]
-    }
+        "Création d'interfaces responsives avec Angular, React et JavaScript dans un cadre Agile.",
+        "Intégration de maquettes issues de Figma et Photoshop, en collaboration avec la direction artistique et le chef de projet.",
+        "Échanges avec les clients pour assurer le suivi et la satisfaction des projets.",
+      ],
+    },
+    {
+      title: "Développeur Front-End",
+      company: "Mira (VR 3D)",
+      period: "4 mois",
+      location: "Paris",
+      highlights: [
+        "Développement d'interfaces enrichies en 3D avec Spline et outils d'IA conversationnelle.",
+        "Collaboration avec les équipes de développement 3D et la direction artistique pour intégrer des designs complexes.",
+      ],
+    },
+    {
+      title: "Développeur Front-End & Intégration eCommerce",
+      company: "Polimair (eCommerce 3D)",
+      period: "1 mois",
+      location: "Paris",
+      highlights: [
+        "Intégration d'un configurateur 3D sur une boutique WebFlow avec JavaScript.",
+        "Automatisation des flux d'informations de vente pour optimiser l'efficacité.",
+      ],
+    },
+    {
+      title: "Développeur Front-End (Freelance)",
+      company: "Particulier",
+      period: "6 mois",
+      location: "Paris",
+      highlights: [
+        "Conception et développement de sites vitrines sur mesure avec WebFlow et JavaScript.",
+        "Intégration d'API et d'animations, optimisation SEO et suivi des performances avec Google Analytics.",
+      ],
+    },
+    {
+      title: "Chef d'équipe paysagiste",
+      company: "Divers employeurs",
+      period: "6 ans",
+      location: "Paris",
+      highlights: [
+        "Supervision d'équipes pour la création et l'entretien de paysages, démontrant leadership et gestion de projets.",
+      ],
+    },
   ];
 
-  const projects = [
-    {
-      name: "Plateforme E-commerce Ski",
-      tech: ["Vue.js 3", "Nuxt 3", "Tailwind", "TypeScript"],
-      description: "Application de réservation de séjours au ski avec filtres avancés et paiement en ligne"
-    },
-    {
-      name: "Dashboard Analytics",
-      tech: ["React", "TypeScript", "Chart.js", "REST API"],
-      description: "Interface d'administration avec visualisations de données temps réel"
-    }
-  ];
+  // Pas de section projets personnalisée pour ce CV
+  const projects: any[] = [];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/30">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -82,15 +123,15 @@ export default function CVPage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Alexandre Dubois
+              Jim Jeannon
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Développeur Frontend • Vue.js / Nuxt 3 • 3 ans d'expérience
+              Développeur Front-End
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>alexandre.dubois@email.com</span>
+                <span>jim.jeannon@example.com</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
@@ -102,13 +143,15 @@ export default function CVPage() {
               </div>
             </div>
             <div className="flex justify-center space-x-4">
-              <Button variant="outline" size="sm">
-                <Github className="h-4 w-4 mr-2" />
-                GitHub
-              </Button>
-              <Button variant="outline" size="sm">
-                <Linkedin className="h-4 w-4 mr-2" />
-                LinkedIn
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://linkedin.com/in/jimjeannon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-4 w-4 mr-2" />
+                  LinkedIn
+                </a>
               </Button>
               <Button className="bg-accent hover:bg-accent/90">
                 <Download className="h-4 w-4 mr-2" />
@@ -133,10 +176,14 @@ export default function CVPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Développeur frontend passionné avec 3 ans d'expérience, spécialisé dans l'écosystème Vue.js. 
-                  Je maîtrise Vue 3 avec la Composition API et Nuxt 3 pour créer des applications web modernes, 
-                  performantes et accessibles. Mon approche privilégie la qualité du code, les bonnes pratiques 
-                  et l'expérience utilisateur optimale.
+                  Développeur Front-End motivé, avec une expertise en React,
+                  TypeScript et méthodologies agiles. Pragmatique et orienté
+                  solutions, je suis passionné par les hautes technologies et le
+                  développement d'interfaces utilisateur performantes. Habitué à
+                  collaborer avec des équipes internationales grâce à mes
+                  expériences à l'étranger, je suis également un fervent skieur,
+                  ce qui reflète mon goût pour les défis dynamiques et la
+                  précision.
                 </p>
               </CardContent>
             </Card>
@@ -151,23 +198,27 @@ export default function CVPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div
+                    key={index}
+                    className="border-l-2 border-primary/20 pl-6 relative"
+                  >
                     <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
                       <h3 className="font-semibold text-lg">{exp.title}</h3>
-                      <Badge variant="outline" className="w-fit">
-                        {exp.period}
-                      </Badge>
+                      {exp.period && (
+                        <span className="ml-2 text-xs text-muted-foreground font-medium border border-primary/30 rounded px-2 py-0.5">
+                          {exp.period}
+                        </span>
+                      )}
                     </div>
-                    <div className="text-primary font-medium mb-1">{exp.company}</div>
-                    <div className="text-sm text-muted-foreground mb-3 flex items-center">
-                      <MapPin className="h-3 w-3 mr-1" />
-                      {exp.location}
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <span className="text-primary font-medium">{exp.company}</span>
+                      <span className="text-xs text-muted-foreground flex items-center"><MapPin className="h-3 w-3 mr-1" />{exp.location}</span>
                     </div>
-                    <ul className="space-y-1">
+                    <ul className="list-disc pl-5 space-y-1">
                       {exp.highlights.map((highlight, idx) => (
                         <li key={idx} className="text-sm text-muted-foreground">
-                          • {highlight}
+                          {highlight}
                         </li>
                       ))}
                     </ul>
@@ -176,28 +227,23 @@ export default function CVPage() {
               </CardContent>
             </Card>
 
-            {/* Projects */}
+            {/* Expériences internationales */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Globe className="h-5 w-5 text-primary" />
-                  <span>Projets Récents</span>
+                  <span>Expériences internationales</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                {projects.map((project, index) => (
-                  <div key={index} className="space-y-3">
-                    <h3 className="font-semibold text-lg">{project.name}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <Badge key={tech} variant="secondary">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <p className="text-sm text-muted-foreground">{project.description}</p>
-                  </div>
-                ))}
+              <CardContent>
+                <ul className="list-disc pl-5 text-muted-foreground">
+                  <li>
+                    Visa Vacances-Travail, Canada, Australie, Nouvelle-Zélande
+                    (2014, 2018, 2020) : Développement de compétences
+                    d'adaptabilité et de collaboration interculturelle dans des
+                    environnements internationaux.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
@@ -217,18 +263,28 @@ export default function CVPage() {
                   <h4 className="font-medium mb-2 text-primary">Frontend</h4>
                   <div className="flex flex-wrap gap-1">
                     {skills.frontend.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-xs">
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {skill}
                       </Badge>
                     ))}
                   </div>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-medium mb-2 text-primary">Outils & Tests</h4>
+                  <h4 className="font-medium mb-2 text-primary">
+                    Outils & Tests
+                  </h4>
                   <div className="flex flex-wrap gap-1">
                     {skills.tools.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-xs">
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -239,7 +295,11 @@ export default function CVPage() {
                   <h4 className="font-medium mb-2 text-primary">Backend</h4>
                   <div className="flex flex-wrap gap-1">
                     {skills.backend.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-xs">
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -250,7 +310,11 @@ export default function CVPage() {
                   <h4 className="font-medium mb-2 text-primary">Autres</h4>
                   <div className="flex flex-wrap gap-1">
                     {skills.other.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-xs">
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -259,7 +323,7 @@ export default function CVPage() {
               </CardContent>
             </Card>
 
-            {/* Education */}
+            {/* Formation */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
@@ -270,14 +334,14 @@ export default function CVPage() {
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="font-semibold">Master Informatique</h3>
-                    <p className="text-sm text-muted-foreground">Université Paris Diderot</p>
-                    <p className="text-xs text-muted-foreground">2019 - 2021</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Licence Informatique</h3>
-                    <p className="text-sm text-muted-foreground">Université Paris Diderot</p>
-                    <p className="text-xs text-muted-foreground">2016 - 2019</p>
+                    <h3 className="font-semibold">
+                      Autodidacte & Formation continue
+                    </h3>
+                    <p className="text-sm text-muted-foreground">En cours</p>
+                    <p className="text-xs text-muted-foreground">
+                      Spécialisation en développement Front-End via plateformes
+                      en ligne et projets pratiques.
+                    </p>
                   </div>
                 </div>
               </CardContent>
